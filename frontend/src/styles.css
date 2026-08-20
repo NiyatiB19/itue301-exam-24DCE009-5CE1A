@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #172b4d; background: #fff; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #fff; }
+.app-shell { min-height: 100vh; }
+.site-header { display: flex; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; padding: 28px 28px 20px; border-bottom: 1px solid #dce6f2; }
+.site-header h1 { margin: 0; color: #123b70; font-size: 1.2rem; }
+.eyebrow { margin: 0 0 8px; color: #2879c7; font-size: .7rem; font-weight: 700; letter-spacing: 1.5px; }
+.navigation { display: flex; gap: 24px; }
+.navigation a { color: #5d6f86; font-size: .9rem; text-decoration: none; }
+.navigation a.active { color: #1267ad; font-weight: 700; }
+.page-content { max-width: 1080px; margin: 0 auto; padding: 64px 28px; }
+h2, h3, p { margin-top: 0; }
+h2 { max-width: 640px; margin-bottom: 16px; color: #123b70; font-family: 'Source Serif 4', serif; font-size: clamp(2.6rem, 6vw, 4.8rem); line-height: 1; }
+h3 { color: #173b68; }
+.intro { max-width: 470px; color: #65778d; font-size: 1.05rem; line-height: 1.6; }
+.home-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 58px 0; }
+.feature-panel { padding: 22px; background: #f7faff; border: 1px solid #dbe8f5; }
+.feature-panel h3 { margin: 28px 0 8px; font-size: 1.15rem; }
+.feature-panel p { margin-bottom: 0; color: #65778d; line-height: 1.5; }
+.feature-number { color: #2879c7; font-weight: 700; }
+.accent-panel { background: #eef6ff; }
+.sample-appointment { margin-top: 68px; padding-top: 24px; border-top: 1px solid #dce6f2; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 18px; }
+.section-heading h3 { margin-bottom: 0; font-size: 1.3rem; }
+.record-count { color: #6d8097; font-size: .82rem; }
+.appointment-card { display: grid; grid-template-columns: 1fr auto auto; gap: 28px; align-items: center; padding: 18px 20px; margin-bottom: 10px; background: #f7faff; border: 1px solid #dbe8f5; border-left: 3px solid #2879c7; }
+.card-label { margin-bottom: 6px; color: #2879c7 !important; font-size: .68rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.appointment-card h3 { margin-bottom: 5px; font-size: 1rem; }
+.appointment-card p:not(.card-label), .appointment-details { margin-bottom: 0; color: #65778d; }
+.appointment-details { display: flex; gap: 18px; font-size: .88rem; }
+.status { padding: 5px 9px; color: #17633e; background: #e4f4ec; font-size: .72rem; font-weight: 700; text-transform: capitalize; }
+.status-pending { color: #8b5b15; background: #fff2d6; }
+.status-cancelled { color: #a43e48; background: #fde9eb; }
+.page-intro { margin-bottom: 38px; }
+.page-intro h2 { font-size: clamp(2.5rem, 5vw, 4rem); }
+.page-intro p:last-child { color: #65778d; line-height: 1.55; }
+.doctor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.doctor-card { padding: 22px; background: #fff; border: 1px solid #dbe8f5; }
+.doctor-avatar { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 22px; color: #fff; background: #2879c7; border-radius: 50%; font-weight: 700; }
+.doctor-card h3 { margin-bottom: 6px; font-size: 1rem; }
+.doctor-card p { margin-bottom: 8px; }
+.doctor-card .specialisation { color: #2879c7; font-weight: 700; }
+.available, .unavailable { font-size: .82rem; }
+.available { color: #17633e !important; }
+.unavailable { color: #a43e48 !important; }
+.booking-layout { max-width: 700px; }
+.booking-form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 24px; border: 1px solid #dbe8f5; }
+.booking-form label { display: grid; gap: 7px; color: #405976; font-size: .8rem; font-weight: 700; }
+.booking-form input, .booking-form select { width: 100%; padding: 12px; color: #172b4d; background: #fff; border: 1px solid #b9cde2; border-radius: 2px; font: inherit; }
+.booking-form input:focus, .booking-form select:focus { outline: 2px solid #9bc9ee; border-color: #2879c7; }
+.booking-form button { grid-column: 1 / -1; justify-self: start; padding: 12px 18px; color: #fff; background: #1267ad; border: 0; border-radius: 2px; font: inherit; font-weight: 700; cursor: pointer; }
+.booking-form button:hover { background: #0d538e; }
+.message { margin-top: 16px; color: #17633e; }
+.form-preview { display: grid; gap: 5px; margin-top: 16px; color: #5d6f86; font-size: .88rem; line-height: 1.6; }
+.error-message { color: #a43e48; }
+.empty-state { padding: 22px 0; color: #65778d; }
+@media (max-width: 700px) {
+  .site-header { display: block; padding: 24px 20px 18px; }
+  .navigation { margin-top: 18px; gap: 17px; flex-wrap: wrap; }
+  .page-content { padding: 48px 20px; }
+  .home-grid, .doctor-grid, .booking-form { grid-template-columns: 1fr; }
+  .appointment-card { grid-template-columns: 1fr; gap: 12px; }
+  .section-heading { align-items: start; }
+  .booking-form button { grid-column: auto; }
+}
